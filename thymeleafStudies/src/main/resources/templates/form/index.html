@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<link rel="stylesheet" type="text/css" href="/css/style.css" th:href="@{/css/style.css}" />
+<head>
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Formulário f</h1>
+    <form action="/submit" method="post" th:object="${game}">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" th:field="*{name}">
+
+        <label for="grade">Nota</label>
+        <input type="number" name="grade" th:field="*{grade}">
+
+        <label for="name">categoria:</label>
+        <input type="text" id="category" name="category" th:field="*{category}">
+
+        <label for="name">review:</label>
+        <input type="text" id="review" name="review" th:field="*{review}">
+		
+		<button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
